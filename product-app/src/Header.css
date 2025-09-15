@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tailwindcss-animated";
 @layer components {
   .image-holder {
     @apply w-6;
@@ -9,8 +10,11 @@
   .header {
     @apply h-20;
   }
-  #menu img:hover {
+  #menu {
     @apply cursor-pointer;
+  }
+  .animation {
+    @apply animate-fade;
   }
 }
 .header ul {

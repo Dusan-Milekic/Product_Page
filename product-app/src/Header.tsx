@@ -2,14 +2,71 @@ import ico_menu from "./assets/icon-menu.svg";
 import cart from "./assets/icon-cart.svg";
 import avatar from "./assets/image-avatar.png";
 import sneakers from "./assets/sneakers 2.svg";
+import close from "./assets/icon-close.svg";
 import "./Header.css";
+import { useRef } from "react";
 
 export default function Header() {
+  const menu = useRef<HTMLDivElement>(null);
+  const navigation = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLImageElement>(null);
+  function Handler() {
+    if (menu.current && navigation.current) {
+      menu.current.classList.add("animation");
+      navigation.current.classList.remove("hidden");
+      console.log(navigation.current);
+    }
+  }
+  function CloseNav() {
+    if (closeRef.current && navigation.current) {
+      navigation.current.classList.add("hidden");
+    }
+  }
   return (
     <>
+      <div
+        ref={navigation}
+        className="hidden absolute top-0 z-10 w-60 bg-amber-900 h-full bg-white border border-black"
+      >
+        <ul className="flex flex-col gap-3.5">
+          <li onClick={CloseNav}>
+            <img src={close} alt="close" ref={closeRef} />
+          </li>
+          <li>
+            <a href="#" className="text-black">
+              Collections
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-black">
+              Man
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-black">
+              Woman
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-black">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-black">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
       <div className="header flex justify-between max-h-10  px-8">
         <div className="left-side flex gap-8 ">
-          <div id="menu" className="img-holder flex items-center">
+          <div
+            id="menu"
+            className="img-holder flex items-center"
+            ref={menu}
+            onClick={Handler}
+          >
             <img src={ico_menu} alt="icon_menu" />
           </div>
 
