@@ -1,0 +1,13 @@
+b{
+    #1D2026
+}
+
+text {
+    #69707D
+}
+
+lower-gray: #E4E9F2
+lower-white: #F6F8FD
+lower-black: #1D2026
+gray: #69707D
+oragne: #FF7E1B

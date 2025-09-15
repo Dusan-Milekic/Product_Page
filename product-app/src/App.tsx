@@ -1,10 +1,12 @@
-import reactLogo from "./assets/react.svg";
+import Header from "./Header";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <img src={reactLogo} alt="logo" />
+      <header className="pt-3">
+        <Header></Header>
+      </header>
     </>
   );
 }

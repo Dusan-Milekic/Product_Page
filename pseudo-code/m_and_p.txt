@@ -1,0 +1,18 @@
+***Za telefon****
+header{
+    padding-x:24px;
+}
+
+.product-image{
+    padding-y: 24px
+}
+.product-info{
+    margin-y: 16px
+}
+.price-srction{
+    margin-y: 32px
+}
+.quantity-add{
+    flex-column
+    gap: 16px
+}

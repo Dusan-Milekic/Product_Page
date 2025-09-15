@@ -1,0 +1,15 @@
+React
+Tailwind
+
+
+***** REACT ****
+---App.js
+const [card,setCard] = useState(0)
+<Header>
+<Product-Image>
+<Product-Details>
+<Footer>
+
+globalna varijabla koju prosledjujemo u ova dva taga
+<Product-Details> azurira <Header> konkretno Cart
+
