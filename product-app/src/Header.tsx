@@ -4,28 +4,52 @@ import avatar from "./assets/image-avatar.png";
 import sneakers from "./assets/sneakers 2.svg";
 import close from "./assets/icon-close.svg";
 import "./Header.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Header() {
   const menu = useRef<HTMLDivElement>(null);
   const navigation = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLImageElement>(null);
+  const [isScreen, setScreen] = useState<boolean>(false);
+  let armed = false;
   function Handler() {
-    if (menu.current && navigation.current) {
-      menu.current.classList.add("animation");
+    if (menu.current && navigation.current && !isScreen) {
       navigation.current.classList.remove("hidden");
-      console.log(navigation.current);
+      menu.current.classList.add("animation");
+
+      setScreen(true);
     }
   }
   function CloseNav() {
-    if (closeRef.current && navigation.current) {
+    if (navigation.current) {
       navigation.current.classList.add("hidden");
+      setScreen(false);
     }
+    armed = true;
   }
+
+  const ClickOnScreen = () => {
+    if (armed) return; // ne dodaj više puta
+    armed = true;
+
+    // odloži za sledeći tik i koristi capture da izbegneš "pojede prvi klik"
+    setTimeout(() => {
+      document.body.addEventListener(
+        "click",
+        (e) => {
+          // ignoriši klikove unutar navigacije
+          if (navigation.current?.contains(e.target as Node)) return;
+          CloseNav();
+        },
+        { once: true, capture: true } as AddEventListenerOptions
+      );
+    }, 0);
+  };
 
   return (
     <>
       <div
+        onMouseLeave={ClickOnScreen}
         ref={navigation}
         className="hidden absolute top-0 z-10 w-60 bg-amber-900 h-full bg-white border-r border-black px-5 py-4 animate-fade-right"
         id="navigation"
