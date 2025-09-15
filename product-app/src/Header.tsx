@@ -22,16 +22,23 @@ export default function Header() {
       navigation.current.classList.add("hidden");
     }
   }
+
   return (
     <>
       <div
         ref={navigation}
-        className="hidden absolute top-0 z-10 w-60 bg-amber-900 h-full bg-white border border-black"
+        className="hidden absolute top-0 z-10 w-60 bg-amber-900 h-full bg-white border-r border-black px-5 py-4 animate-fade-right"
+        id="navigation"
       >
-        <ul className="flex flex-col gap-3.5">
-          <li onClick={CloseNav}>
-            <img src={close} alt="close" ref={closeRef} />
-          </li>
+        <div onClick={CloseNav} className="mb-7 mt-3">
+          <img
+            src={close}
+            alt="close"
+            ref={closeRef}
+            className="cursor-pointer"
+          />
+        </div>
+        <ul className="flex flex-col gap-3.5 nav-list">
           <li>
             <a href="#" className="text-black">
               Collections

@@ -16,6 +16,9 @@
   .animation {
     @apply animate-fade;
   }
+  .nav-list li a {
+    @apply text-lg font-bold;
+  }
 }
 .header ul {
   display: none;
@@ -57,5 +60,8 @@ hr {
   }
   hr {
     display: block;
+  }
+  #navigation {
+    display: none;
   }
 }
