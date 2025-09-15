@@ -9,6 +9,9 @@
   .header {
     @apply h-20;
   }
+  #menu img:hover {
+    @apply cursor-pointer;
+  }
 }
 .header ul {
   display: none;
@@ -16,6 +19,7 @@
 hr {
   display: none;
 }
+
 @media only screen and (min-width: 768px) {
   .header {
     max-height: fit-content;
