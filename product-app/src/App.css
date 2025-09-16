@@ -8,4 +8,7 @@
   main {
     padding: 96px 32px;
   }
+  main {
+    padding: 96px 5%;
+  }
 }
