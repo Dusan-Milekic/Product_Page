@@ -1,4 +1,5 @@
 import Header from "./Header";
+import ProductImage from "./ProductImage";
 import "./App.css";
 
 function App() {
@@ -7,6 +8,9 @@ function App() {
       <header className="pt-3">
         <Header></Header>
       </header>
+      <main>
+        <ProductImage></ProductImage>
+      </main>
     </>
   );
 }
