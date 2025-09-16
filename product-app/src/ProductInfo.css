@@ -1,8 +1,23 @@
+#cart {
+  width: 100%;
+}
+.w-cont {
+  width: 100%;
+}
+
 @media only screen and (min-width: 1440px) {
   .info-btn {
     flex-direction: row;
   }
+  .w-cont {
+    width: 500px;
+  }
   #numericContainer {
     max-width: 30%;
+  }
+  #cart {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 50%;
   }
 }

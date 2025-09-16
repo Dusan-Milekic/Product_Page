@@ -3,7 +3,7 @@ import "./ProductInfo.css";
 export default function ProductInfo() {
   return (
     <>
-      <div>
+      <div className="w-cont pt-10">
         <div className="info px-8 flex flex-col gap-4">
           <h3 className="font-extrabold  text-xs text-gray-500 tracking-widest">
             SNEAKER COMPANY
@@ -31,12 +31,12 @@ export default function ProductInfo() {
             className=" bg-gray-100 w-full h-14 max-h-full flex justify-between items-center rounded-xl "
             id="numericContainer"
           >
-            <div className=" w-10 hover:bg-black  h-full flex justify-center items-center rounded-l-xl cursor-pointer">
+            <div className=" w-10 hover:bg-black  transition h-full flex justify-center items-center rounded-l-xl cursor-pointer">
               <img src="icon-minus.svg" alt="minus" />
             </div>
             <p className="text-black font-bold">0</p>
 
-            <div className="w-10 hover:bg-black h-full flex items-center justify-center rounded-r-xl cursor-pointer">
+            <div className="w-10 hover:bg-black h-full transition flex items-center justify-center rounded-r-xl cursor-pointer">
               <img src="icon-plus.svg" alt="plus" />
             </div>
           </div>

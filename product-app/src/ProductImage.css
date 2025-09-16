@@ -35,6 +35,6 @@
   }
   .thumbnails {
     height: auto;
-    visibility: visible;
+    display: flex;
   }
 }
