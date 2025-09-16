@@ -10,8 +10,14 @@ function App() {
         <Header></Header>
       </header>
       <main>
-        <ProductImage></ProductImage>
-        <ProductInfo></ProductInfo>
+        <div className="info-all">
+          <div>
+            <ProductImage></ProductImage>
+          </div>
+          <div className="max-w-info">
+            <ProductInfo></ProductInfo>
+          </div>
+        </div>
       </main>
     </>
   );

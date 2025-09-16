@@ -10,5 +10,13 @@
   }
   main {
     padding: 96px 5%;
+    max-width: 62%;
+    margin: 0 auto;
+  }
+  .info-all {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
   }
 }
